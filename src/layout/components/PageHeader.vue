@@ -33,8 +33,6 @@ const options = ref([
     icon: renderIcon(LogoutIcon)
   }
 ])
-
-
 const select = (key:string) =>{
       switch (key) {
         case 'logout':

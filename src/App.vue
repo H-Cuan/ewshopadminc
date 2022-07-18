@@ -6,12 +6,8 @@
         </n-loading-bar-provider>
     </n-message-provider>
   </div>
-
 </template>
 <script setup lang="ts">
-
-
-
 </script>
 <style>
 

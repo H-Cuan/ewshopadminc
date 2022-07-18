@@ -20,7 +20,6 @@
       </n-layout>
     </n-layout>
 </template>
-
 <script setup>
 import PageHeader from './components/PageHeader.vue'
 import PageSider from './components/PageSider.vue'

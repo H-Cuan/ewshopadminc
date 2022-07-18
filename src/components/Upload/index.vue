@@ -1,7 +1,5 @@
 <template>
-  <n-upload
-      :custom-request="customRequest"
-  >
+  <n-upload :custom-request="customRequest">
     <n-button v-if="!imgurl">上传文件</n-button>
     <n-image
         v-else
@@ -21,8 +19,6 @@ const imgurl = ref(null)
 const customRequest = ({file,action,header,onFinish,onError})=>{
   // console.log(file,action,header,onFinish,onError)
   uploadToken().then(res=>{
-    // 图片上传的逻辑
-    // 组装上传的参数、
     const formData = new FormData();
     // 随机生成图片名称 带有时间戳 根据 file.name 来获取文件后缀名
     const fileName = `${Date.now()}${Math.floor(Math.random()*1000)}.${file.name.split('.').pop()}`;
@@ -43,12 +39,10 @@ const customRequest = ({file,action,header,onFinish,onError})=>{
       imgurl.value = `${res.host}/${fileName}`;
       onFinish(fileName)
     }).catch(err=>{
-      // onError(err)
+
     })
   })
-
 }
-
 </script>
 
 <style scoped>

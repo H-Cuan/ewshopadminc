@@ -4,7 +4,6 @@
       <img class="m-auto" src="~@/assets/images/logo.png"  alt="logo"/>
     </div>
     <n-menu :options="menuOptions" :value="defaultKey" inverted @update:value="handleUpdateValue" />
-
     <!--    <n-menu-->
 <!--        :inverted="true"-->
 <!--        :collapsed-width="64"-->
